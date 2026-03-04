@@ -7,4 +7,3 @@ if media_escolar > 8.0 and (renda_familiar < 2000 or escola == "S"):
 
 elif media_escolar < 8.0 and (renda_familiar > 2000 or escola == "N"):
     print("vc não ganhou a bolsa")
-
