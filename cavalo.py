@@ -1,6 +1,6 @@
 nome = "cavalo" 
 idade = 16
-peso = 65.7
+peso = 650.7
 sexo = "feminino"
 
 print(nome)
