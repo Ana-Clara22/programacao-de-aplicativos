@@ -1,4 +1,5 @@
 nomes = ["Cristopher", "Bob", "Gabriela", "Janaina", "Jota"]
-digite_o_nome = input("digite um nome")
 
-for nomes (1, 4):
+for nome in nomes:
+    if len(nome)>5:
+        print(nomes)
