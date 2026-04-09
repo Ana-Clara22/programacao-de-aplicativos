@@ -10,8 +10,8 @@ n4 = float(input("Nota 4: "))
 notas.append(n4)
 
 soma = 0
-for n in notas:
-    soma = soma + n
+for numero in notas:
+    soma = soma + numero
 
 media = soma / 4
 

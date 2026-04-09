@@ -1,19 +1,24 @@
 saldo = 500
+opcao = 0 
+while opcao != "3":
+    print("-----Caixa eletrônico-----")
+    print("1- Depositar")
+    print("2- Sacar")
+    print("3- Sair")
 
-print("1 - depositar")
-print("2 - sacar")
-print("3 - Sair")
+    opcao = input("O que você deseja fazer? ")
 
-menu = int(input("Escolha uma opção: "))
-while menu != 3:
-    3 = input("Digite algo (ou 'sair' para encerrar): ")
-    print("Você digitou:", menu)
-    print("Programa encerrado.")
+    if opcao == "1":
+        depositar = float(input("Qual valor você deseja depositar?: R$"))
+        saldo = saldo + depositar
+        print(f"Depósito realizado R${saldo}")
 
-    if menu == 1:
-        depositar = input("qual valor vc deseja depositar: ")
-        print(depositar)
-        opcao = input("Escolha uma opção: ")
-    if menu == 2:
-        2 > 500
-        print("saldo insuficiente!")
+    if opcao == "2":
+        saque = float(input("Qual é o valor que você deseja sacar?: R$"))
+        
+        if saque <= saldo:
+            saldo = saldo - saque
+            print(f"Saque realizado! Novo saldo: R${saldo}")
+        else:
+            print("Operação negada! Saldo insuficiente.")
+
