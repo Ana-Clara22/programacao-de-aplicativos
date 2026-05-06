@@ -1,21 +1,14 @@
 def verificar_aprovacao(nota_teste, anos_xp, possui_certificacao):
     
-    if possui_certificacao:
-        return True, "aprovado por possuir certificação"
+    if possui_certificacao == 's':
+        return "contratar"
     elif nota_teste > 80 and anos_xp > 2:
-        return True, "aprovado por boa nota e experiência suficiente"
+        return "contratar"
     else:
-        return False, "não atende aos critérios mínimos"
+        return "descartar"
 
 nota = int(input("digite sua nota: "))
 experiencia = int(input("quantos anos de experiência você tem? "))
 certificacao = input("possui certificação? (s/n): ")
-if certificacao == "s":
-    aprovado, motivo = verificar_aprovacao(nota, experiencia, certificacao)
-
-if aprovado:
-    print("Contratar")
-else:
-    print("Descartar")
-
-print("Motivo:", motivo)
+retorno = verificar_aprovacao(nota, experiencia, certificacao)
+print(retorno)
