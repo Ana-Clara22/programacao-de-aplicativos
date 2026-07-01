@@ -5,7 +5,7 @@ def criar_tabelas():
     cursor = conexao.cursor
 
     # Este bloco quebra ao rodar pela primeir vez em um banco limpo. Por quê?
-#R) 
+#R) estava dando erro porque estava puxando uma referencia de umna tabela que nao existe
 
     cursor.execute('''
                 CREATE TABLE IF NOT EXIST series (
