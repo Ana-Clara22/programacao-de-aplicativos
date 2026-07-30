@@ -13,6 +13,4 @@ def buscar_dados_dinamicos(nome_tabela, id_registro):
      
 	print(cursor.fetchone()) 
     conexao.close() 
-
-
-
+	

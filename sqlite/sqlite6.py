@@ -1,16 +1,12 @@
 import sqlite3
 
 def buscar_professor(id_prof):
-    conexao = sqlite3.connect('sistema escola.db')
+    conexao = sqlite3.connect('sistema_escola.db')
     cursor = conexao.cursor()
 
-    # O python reclama de "Incorrect number of bindings".
-    # Estamos passando a variavel, por que ocorre o erro?
-
-#R) É obrigatorio colocar a virgula dps do elemento
-
-    cursor.execute("SELECT nome FROM professores WHERE id = ?", (id_prof,))
-    resultado = cursor.fetchone()
+    cursor.execute("SELECT nome FROM professores WHERER id = ?", (id_prof,))
+    resultado = cursor.fetchone
     print(resultado)
-    conexao.close
- 
+    conexao.close()
+
+#R) O erro era que faltava uma virgula no id_prof pois ele so executa se tiver dois e para burlar o sistema tem que ter uma virgula la 

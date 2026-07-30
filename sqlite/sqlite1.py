@@ -1,18 +1,19 @@
 import sqlite3 
 
-def inicializar_banco():
+def inicializa_banco():
     conexao = sqlite3.connect('sistema_escola.db')
     cursor = conexao.cursor()
+
     cursor.execute('''
-            CREATE TABLE IF NOT EXISTS escolas (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                nome TEXT NOT NULL  
-            )
-        ''')
-    conexao.commit() # o banco de dados nao foi criado
-    conexao.close() 
+                   CREATE TABLE IF NOT EXISTS escolas (
+                   id INTERGER PRIMARY KEY AUTOINCREMENT,
+                   nome TEXT NOT NULL
+                   )
+                   ''')
+    
+    conexao.commit()
+    conexao.close()
+    
+#R) Não foi criado o banco de dados
+#R) Não esta salvando as informações pois não colocaram o conexao.commit() que a variavel que salva as informações no banco
 
-#O banco nã está salvando as alterações. Por quê? 
-
-#R) Estava faltando o commit
-  

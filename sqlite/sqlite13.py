@@ -1,3 +1,4 @@
+
 import sqlite3
 
 def verificar_registros():
@@ -13,4 +14,4 @@ def verificar_registros():
 
     conexao.close()
 
-#R) O fetchall() só consegue pegar os dados uma vez, depois disso o cursor fica vazio.
+#R) O fetchall() só consegue pegar os dados uma vez depois o cursor fica vazio
