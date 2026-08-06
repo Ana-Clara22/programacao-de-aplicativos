@@ -7,8 +7,12 @@ def menu():
         if opcao == "1": 
             print("Cadastrando...") 
         elif opcao == "2": 
-            print("Saindo do programa.")
+            print("Saindo do programa.") 
+            break
 
-        break 
+            
+            pass 
+menu()
 
-#R) O erro é que o pass não encerra o laço while 
+
+#pass não interrompe o while True, precisa usar break

@@ -1,19 +1,32 @@
 import sqlite3 
 
-def inicializa_banco():
+def inicializar_banco():
     conexao = sqlite3.connect('sistema_escola.db')
     cursor = conexao.cursor()
 
     cursor.execute('''
-                   CREATE TABLE IF NOT EXISTS escolas (
-                   id INTERGER PRIMARY KEY AUTOINCREMENT,
-                   nome TEXT NOT NULL
-                   )
-                   ''')
+            CREATE TABLE IF NOT EXISTS escolas (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                nome TEXT NOT NULL  
+            )
+        ''')
+
+    nome_completo = input("Digite o seu nome: ")
+
     
+    comando_inserir = f'''
+    INSERT INTO escolas (nome)
+    VALUES ('{nome_completo}')
+    '''
+    cursor.execute(comando_inserir)
+
+
     conexao.commit()
-    conexao.close()
-    
-#R) Não foi criado o banco de dados
-#R) Não esta salvando as informações pois não colocaram o conexao.commit() que a variavel que salva as informações no banco
+    print("cadastro realizado")
+    conexao.close() 
+
+inicializar_banco()
+
+
+# Não tinha conexcao.commit, então os dados nao salva sem isso 
 

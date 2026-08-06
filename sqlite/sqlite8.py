@@ -12,7 +12,4 @@ def cadastrar_professor (nome, cpf):
                    )
                    ''')
     
-#R) O erro era por que o cpf não estava unique e ele so pode ser unico 
-#R) Entao para não dar erro tem que colocar unique no cpf
-
-
+# O erro era por que o cpf não estava com o unique, O UNIQUE garante q os cpfs n se repitam

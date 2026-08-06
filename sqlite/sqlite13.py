@@ -1,17 +1,20 @@
+import sqlite3 
+ 
+def verificar_registros(): 
+    conexao = sqlite3.connect('sistema_escola.db') 
+    cursor = conexao.cursor() 
+     
+    cursor.execute("SELECT * FROM alunos") 
+     
+	
+    print("Primeiro print:", cursor.fetchall()) 
 
-import sqlite3
 
-def verificar_registros():
-    conexao = sqlite3.connect('sistema_escola.db')
-    cursor = conexao.cursor()
+    cursor.execute("SELECT * FROM alunos") 
+    print("Segundo print:", cursor.fetchall()) 
+     
+    conexao.close() 
 
-    cursor.execute("SELECT * FROM alunos")
+verificar_registros()
 
-    dados = cursor.fetchall()
-
-    print("Primeiro print:", dados)
-    print("Segundo print:", dados)
-
-    conexao.close()
-
-#R) O fetchall() só consegue pegar os dados uma vez depois o cursor fica vazio
+#o fetchall apaga todos os registro que escreveu, fazendo com oq escreveu retorne em uma lista vazia
